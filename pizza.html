@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Hutt</title>
+<head>
+<style>
+    body{
+        background-color: rgb(230, 231, 233);
+    }
+    h1{
+        color: rgb(37, 37, 37);
+        font-family: Sharp Sans Semibold Display No1,system-ui,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
+        text-align: center;
+    }
+    
+#grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  /* background-color: #ccd8e2; */
+  padding: 10px;
+}
+
+.grid-items {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* border: 1px solid none; */
+  text-align: center;
+  font-size: 30px;
+  width:300px ;
+  height: 550px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  border-radius: 5px;
+}
+.grid-items:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* border: 1px solid ; */
+  text-align: center;
+  font-size: 30px;
+  width:300px ;
+  height: 550px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/* #grid-container>.grid-items> div > img{
+     background-color: brown; 
+     border: 1px solid red; 
+     border-radius: 8px;
+} */
+
+.items-name{
+    font-size: 2.5rex;
+    font-family: Sharp Sans Semibold Display No1,system-ui,BlinkMacSystemFont,Helvetica Neue,Helvetica,sans-serif;
+}
+.Vegetarian-logo{
+    color: green;
+}
+.chili-logo{
+    color: rgb(255, 47, 11);
+}
+p{
+    color: rgb(15, 15, 15);
+    font-size: 1rem;
+}
+button{
+    width: 280px;
+    height: 35px;
+    border: 1px sold black;
+    border-radius: 5px;
+    background-color:#08671A;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   font-weight:bold ;
+   margin-top:10px ;
+}
+
+button:hover{
+    width: 280px;
+    height: 35px;
+    border: 1px sold black;
+    border-radius: 5px;
+    background-color:#229c38;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-weight:bold ;
+}
+
+
+/* select  */
+#pizza-name{
+    width: 280px;
+    height: 35px;
+    font-weight: bold;
+    background-color: rgb(192, 189, 189);
+    border-radius: 3px;
+}
+#pizza-name:hover{
+    background-color: rgb(183, 214, 192);
+}
+
+
+/* pizza description */
+
+.item-dscription{
+    color: rgb(26, 25, 25);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+  /* Vegetarian & Mild */
+.item-type{
+    color: rgb(49, 47, 47);
+    font-size: large;
+    font-weight: bold;
+}
+
+/* Select your size & crust */
+.option-notice{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+</style>
+</head>
+<body>
+
+<h1>Newly Lanuched</h1>
+
+
+<!-- pizza list -->
+<div id="grid-container">
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/schezwan-margherita.4371d9483546db47a97c5503ccad0c2f.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">Schezwan Margherita <span class="Vegetarian-logo">&#9689;</span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">Your very own Margherita, now with a spicy twist! Loaded with our signature spicy schezwan sauce & 100% mozzarella cheese.</p>
+        <p class="item-type">Vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+    </div>
+
+      
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/mazedar-makhni-paneer.cb3150d2be9cb8dcd248be70921c5196.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">
+            Mazedar Makhni Paneer <span class="Vegetarian-logo">&#9689;</span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">A treat for all makhni lovers. Spiced paneer, onion, juicy red bell peppers with our new flavourful makhni sauce  topped with 100% mozzarella cheese.</p>
+        <p class="item-type">Vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+    </div>
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/awesome-american-cheesy.17f198e5a73db40c367ddfe96da54a4c.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">
+            Awesome American Cheesy <span class="Vegetarian-logo">&#9689;</span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">Our divine peruvian flavoured cheesy sauce, topped with sweet corn, green capsicum, red paprika and 100% mozzarella cheese</p>
+        <p class="item-type">Vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+    </div>
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/ultimate-tandoori-veggie.059dfd9b3f088818ed725872d98d20b6.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">
+            Ultimate Tandoori Veggie<span class="Vegetarian-logo">&#9689;</span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">An ultimate combination of your favourite veggies- onion, green capsicum, mushroom, tomato, spicy jalapeno on tandoori sauce.</p>
+        <p class="item-type">Vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+    </div>
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/mexican-fiesta.559a1961ca021b8fb90367c6918e50f1.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">Mexican Fiesta <span class="Vegetarian-logo">&#9689;</span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">Flavourful mix of red capsicum, green capsicum, jalapeno, onion, black olives, sweet corn and 100% mozzarella Cheese with a signature spice sprinkle.</p>
+        <p class="item-type">Vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+    </div>
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/dhabe-da-keema.e90fcda2e1a021bf4ab4d55a9b4fe32a.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">Dhabe Da Keema <span class="Vegetarian-logo"></span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">Dhaba style chicken keema masala, with green chiili, crunchy onion with flavourful pan sauce, 100% mozzarella cheese & a generous drizzle of mint mayo.</p>
+        <p class="item-type">Non-vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+    </div>
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/margherita.90f9451fd66871fb6f9cf7d506053f18.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">
+            Margherita <span class="Vegetarian-logo">&#9689;</span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">
+            Margherita
+            Pizza topped with our herb-infused signature pan sauce and 100% mozzarella cheese. A classic treat for all cheese lovers out there!.</p>
+        <p class="item-type">Vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+    </div>
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/mazedar-makhni-paneer.cb3150d2be9cb8dcd248be70921c5196.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">
+            Tandoori Paneer<span class="Vegetarian-logo">&#9689;</span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">It's our signature. Spiced Paneer, Crunchy Onions & Green Capsicum, spicy Red Paprika with delicious Tandoori Sauce and 100% mozzarella cheese!</p>
+        <p class="item-type">Vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+    </div>
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/cheezy-mushroom-magic.40d9989d4e84c2d302a338da3dfa7140.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">Cheezy Mushroom Magic <span class="Vegetarian-logo">&#9689;</span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">A new combination with creamy mushroom sauce, chunky black olives, spicy jalapeno, juicy sweet corn, mushroom and 100% mozzarella.</p>
+        <p class="item-type">Vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+    </div>
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/schezwan-chicken-meatballs.70ae7b7845cb782346ac66563bb47cfa.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">
+            Sizzling Schezwan Chicken<span class="Vegetarian-logo"></span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">Your very own Margherita, now with a spicy twist! Loaded with our signature spicy schezwan sauce & 100% mozzarella cheese.</p>
+        <p class="item-type">Non-vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+        
+    </div>
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/awesome-american-cheesy-chicken.19656ad3905cfb8bb25d1ad36ff9deb8.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">
+            Awesome American Cheesy Chicken<span class="Vegetarian-logo"></span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">Our divine peruvian flavoured cheesy sauce, topped with classic chicken pepperoni, cheese and chicken sausage.</p>
+        <p class="item-type">Non-vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+        
+    </div>
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/nawabi-murg-makhni.0c32181021b6b11acdde8bbb8887248b.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">
+            Nawabi Murg Makhni<span class="Vegetarian-logo"></span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">A chicken lovers delight ! Combination of chicken malai tikka, flavourful chicken keema masala, crunchy onion, juicy tomato on our new makhni sauce .</p>
+        <p class="item-type">Non-vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+
+    </div>
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/veggie-supreme.bc8dd369182b636ff171077efa53c344.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">
+            Veggie Supreme<span class="Vegetarian-logo">&#9689;</span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">A supreme combination of Black Olives, Green Capsicum, Mushroom, Onion, spicy Red Paprika & juicy Sweet Corn with flavourful pan.</p>
+        <p class="item-type">Vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+
+    </div>
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/chicken-supreme.6d53f104f071d304a47440f2fffa7378.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">
+            Chicken Supreme<span class="Vegetarian-logo"></span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">Loaded with delicious Chicken Tikka, flavourful Herbed Chicken, spicy Schezwan Chicken Meatball with flavourful pan.</p>
+        <p class="item-type">Non-vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+
+    </div>
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/chicken-tikka-supreme.830de5a911ca95a30e4ca98e529f1b3a.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">
+            Chicken Tikka Supreme<span class="Vegetarian-logo"></span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">A divine combination of delicious Chicken Tikka & Malai Chicken Tikka, Onion, spicy Red Paprika with flavourful pan & mozerella cheese.</p>
+        <p class="item-type">Non-vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+
+    </div>
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/triple-chicken-feast.e4a546e7a8581a60952b99e3fe22987e.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">
+            Triple Chicken Feast<span class="Vegetarian-logo"></span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">A supreme combination of Black Olives, Green Capsicum, Mushroom, Onion, spicy Red Paprika & juicy Sweet Corn with flavourful pan.</p>
+        <p class="item-type">Non-vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+
+    </div>
+
+    <div class="grid-items">
+        <div>
+            <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/chicken-tikka.6d441a65371e941db36c2754586119a8.1.jpg?width=300" alt="">
+        </div>
+        <h3 class="items-name">
+            Chicken Tikka<span class="Vegetarian-logo"></span> <span class="chili-logo">&#127798;</span></h3>
+        <p class="item-dscription">Mouth-watering Chicken Tikka, crunchy Onion & Tomato with delicious Tandoori Sauce and 100% mozzarella cheese.</p>
+        <p class="item-type">Non-vegetarian & Mild</p>
+        <p class="option-notice">Select your size & crust</p>
+        <select name="item-size" id="pizza-name">
+            <option value="Medium Plan">Medium Plan</option>
+            <option value="Medium San Fransisco Style">Medium San Fransisco Style</option>
+            <option value="Medium stufeed Crust-Chees Maxx">Medium stufeed Crust-Chees Maxx</option>
+            <option value="Personal Pan">Personal Pan</option>
+            <option value="Personal San Fransisco Style">Personal San Fransisco Style</option>
+            <option value="Personal Stufeed Crust-Chees Maxx">Personal Stufeed Crust-Chees Maxx</option>
+        </select>
+        <button>Add &#8377;389</button>
+
+    </div>
+
+        
+            
+            
+
+        
+
+        
+        
+        
+
+        
+
+</div>
+
+
+
+</body>
+</html>
+
